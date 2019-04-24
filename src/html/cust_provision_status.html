@@ -1,0 +1,2746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="S2S COMMUNICATIONS">
+  <meta name="author" content="S2S COMMUNICATIONS DASHBOARD">
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+  <title>S2S COMMUNICATIONS DASHBOARD</title>
+  <!-- This page CSS -->
+  <!-- Custom CSS -->
+  <link href="dist/css/style.min.css" rel="stylesheet">
+  <!-- Dashboard 1 Page CSS -->
+  <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
+  <!-- DatePicker CSS -->
+  <link href="../assets/node_modules/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
+
+  <style>
+    .status-circle {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      color: white;
+      background-color: gray;
+      border-color: #86B63E !important;
+      border-style: solid;
+      border-width: 3px;
+      text-align: center;
+      overflow: hidden;
+      display: table-cell;
+      vertical-align: middle;
+      position: relative;
+    }
+
+    .status-active {
+      background-color: #86B63E;
+    }
+
+
+    .line {
+      width: 70%;
+      height: 70px;
+      border-bottom: 5px solid gray;
+      margin-left: 10%;
+      position: absolute;
+    }
+
+    .wizard-cntr {
+      margin: 3em 0;
+    }
+
+    .card-border{
+      border: 1px solid #86B63E;
+    }
+
+    @media (min-width: 992px) {
+      .modal-xl {
+        max-width: 1140px;
+      }
+    }
+
+  </style>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="skin-green fixed-layout">
+  <!-- ============================================================== -->
+  <!-- Preloader - style you can find in spinners.css -->
+  <!-- ============================================================== -->
+  <div class="preloader">
+    <div class="loader">
+      <div class="loader__figure"></div>
+      <p class="loader__label">S2S COMMUNICATIONS</p>
+    </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- Main wrapper - style you can find in pages.scss -->
+  <!-- ============================================================== -->
+  <div id="main-wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <header class="topbar">
+      <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+        <!-- ============================================================== -->
+        <!-- Logo -->
+        <!-- ============================================================== -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="cust_landing.html">
+            <span>S2S COMMUNICATIONS</span>
+          </a>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Logo -->
+        <!-- ============================================================== -->
+        <div class="navbar-collapse">
+          <!-- ============================================================== -->
+          <!-- toggle and nav items -->
+          <!-- ============================================================== -->
+          <ul class="navbar-nav mr-auto">
+            <!-- This is  -->
+            <li class="nav-item"> <a class="nav-link nav-toggler d-block d-sm-none waves-effect waves-dark" href="javascript:void(0)"><i
+                  class="ti-menu"></i></a> </li>
+            <li class="nav-item"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark"
+                href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
+          </ul>
+          <!-- ============================================================== -->
+          <!-- Logout Button -->
+          <!-- ============================================================== -->
+          <ul class="navbar-nav my-lg-0">
+            <li class="nav-item"><a class="nav-link  waves-effect waves-light" href="login.html"><i class="fa fa-power-off"></i><b>
+                  Logout</b></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- ============================================================== -->
+    <!-- End Topbar header -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div class="scroll-sidebar">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+          <ul id="sidebarnav">
+            <!-- Custom User Profile -->
+            <span class="hide-menu">
+              <div class="card">
+                <div class="card-body" style="padding-bottom: 1px;">
+                  <small class="text-muted"><i class="ti-id-badge"></i> Profile</small>
+                  <h4 class="card-title">CCUSTOMER</h4>
+                  <small class="text-muted">Username</small>
+                  <p class="card-text">Customer Customer</p>
+                  <small class="text-muted">Email Address</small>
+                  <p class="card-text">customer@gibisystems.com</p>
+                </div>
+              </div>
+            </span>
+
+            <!-- Profile Edit -->
+            <li><a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-edit"></i><span
+                  class="hide-menu">Edit Profile</span></a></li>
+
+            <li class="nav-small-cap">--- MAIN MENU</li>
+
+            <li> <a href="cust_landing.html" class="waves-effect waves-dark"><i class="ti-layout-grid2"></i><span class="hide-menu">
+                  Dashboard</span></a></li>
+            <li> <a href="cust_create_request.html" class="waves-effect waves-dark"><i class="ti-comment-alt"></i><span
+                  class="hide-menu"> Create Request</span></a></li>
+            <li> <a href="cust_provisions.html" class="waves-effect waves-dark"><i class="ti-support"></i><span class="hide-menu">
+                  View All Requests</span></a></li>
+          </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper">
+      <!-- ============================================================== -->
+      <!-- Container fluid  -->
+      <!-- ============================================================== -->
+      <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class="row page-titles">
+          <div class="col-md-5 align-self-center">
+            <h4 class="text-themecolor">Provision Status</h4>
+          </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- Start Page Content -->
+        <!-- ============================================================== -->
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row wizard-cntr">
+                  <div class="col-md-12">
+                    <div class="line row flex-nowrap"></div>
+                    <div class="row flex-nowrap">
+                      <div class="col-lg-2 offset-lg-1">
+                        <div class="col-md-12 status-circle">
+                          <div class="status-txt">Prequal<br>request<br>received</div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-2">
+                        <div class="col-md-12 status-circle status-active">
+                          <div class="status-txt">Quote<br>Provided</div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-2">
+                        <div class="col-md-12 status-circle">
+                          <div class="status-txt">Order<br>Received</div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-2">
+                        <div class="col-md-12 status-circle">
+                          <div class="status-txt">Order Placed<br>with ISP</div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-2">
+                        <div class="col-md-12 status-circle">
+                          <div class="status-txt">Circuit Installed,<br>Details sent to<br> Customer</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Chane the below format to tabbed view with headers Site Info, Request Info, Circuit info -->
+        <nav class="bg-white">
+          <div class="nav nav-pills nav-fill" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-site-tab" data-toggle="tab" href="#nav-site" role="tab"
+              aria-controls="nav-site" aria-selected="true">Site Details</a>
+            <a class="nav-item nav-link" id="nav-quote-tab" data-toggle="tab" href="#nav-quote" role="tab"
+              aria-controls="nav-quote" aria-selected="false">PreQualification</a>
+            <a class="nav-item nav-link" id="nav-siteNotes-tab" data-toggle="tab" href="#nav-siteNotes" role="tab"
+              aria-controls="nav-site" aria-selected="true">Site Notes</a>
+            <a class="nav-item nav-link" id="nav-dispatch-tab" data-toggle="tab" href="#nav-dispatch" role="tab"
+              aria-controls="nav-dispatch" aria-selected="false">Tech Dispatch</a>
+            <a class="nav-item nav-link" id="nav-circuit-tab" data-toggle="tab" href="#nav-circuit" role="tab"
+              aria-controls="nav-circuit" aria-selected="false">Circuit</a>
+            <a class="nav-item nav-link" id="nav-devices-tab" data-toggle="tab" href="#nav-devices" role="tab"
+            aria-controls="nav-devices" aria-selected="false">Devices</a>
+          </div>
+        </nav>
+
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-site" role="tabpanel" aria-labelledby="nav-site-tab">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    Site Information
+                  </div>
+                  <div class="card-body">
+                    <form action="#">
+                      <div class="form-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="control-label">Company Name*</label>
+                              <input type="text" id="company_name" class="form-control" value="Gibi Systems" readonly>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="control-label">Email*</label>
+                              <input type="text" id="email" class="form-control" value="customer@gibisystems.com"
+                                readonly>
+                            </div>
+                          </div>
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label class="control-label">Site ID*</label>
+                              <input type="text" id="site_id" class="form-control" value="123" readonly>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label class="control-label">Location Phone #</label>
+                              <input type="text" id="location_phone" class="form-control" value="2012456668" readonly>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label class="control-label">Site Contact</label>
+                              <input type="text" id="site_contact" class="form-control" value="kumaran" readonly>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label class="control-label">Site Contact Phone #</label>
+                              <input type="text" id="site_contact_phone" class="form-control" value="8666542102"
+                                readonly>
+                            </div>
+                          </div>
+                        </div>
+                        <!--/row-->
+                        <!--/row-->
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="control-label">Address Line 1*</label>
+                              <input type="text" id="address_line_1" class="form-control" value="2442 courtney oaks rd"
+                                readonly>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="control-label">Created By</label>
+                              <input type="text" id="created_by" class="form-control" value="prashant" readonly>
+                            </div>
+                          </div>
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="control-label">Address Line 2*</label>
+                              <input type="text" id="address_line_2" class="form-control" readonly>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="control-label">Circuit Purpose</label>
+                              <select class="form-control" data-placeholder="Select Circuit Purpose" id="circuit_purpose"
+                                tabindex="1" readonly>
+                                <option value="Primary">Primary</option>
+                                <option value="Backup" selected>Backup</option>
+                                <option value="VoIP">VoIP</option>
+                                <option value="Other">Other</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label class="control-label">City*</label>
+                              <input type="text" id="city" class="form-control" value="charlotte" readonly>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label class="control-label">State*</label>
+                              <select class="form-control" data-placeholder="Select State" tabindex="1" readonly>
+                                <option value="state">NC</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="control-label">Quote Provided</label>
+                              <div class="input-group">
+                                <input type="text" id="quote_provided" class="form-control" value="06-01-2018" readonly>
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="ti-calendar"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label class="control-label">Zip Code*</label>
+                              <input type="text" id="zip_code" class="form-control" value="28217" readonly>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label class="control-label">Country</label>
+                              <input type="text" id="country" class="form-control" value="USA" readonly>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-quote" role="tabpanel" aria-labelledby="nav-quote-tab">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <a href="#" class="float-right btn btn-primary" data-toggle="modal" data-target="#prequalEditModal"><i class="fa fa-plus-circle mr-3"></i>create</a>
+                    <input type="text" class="form-control float-right mr-2" placeholder="search provider" style="width: 40%;">
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-hover">
+                            <thead>
+                            <th>Provider</th>
+                            <th>Action</th>
+                            <th>Service Type</th>
+                            <th>Requestor</th>
+                            <th>Date</th>
+                            <th></th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                              <td>Sudden Link</td>
+                              <td>Prequal Complete</td>
+                              <td>Internet</td>
+                              <td>Gibi Systems</td>
+                              <td>06-21-2017</td>
+                              <td>
+                                  <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#prequalEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                                <td>Sudden Link</td>
+                                <td>Prequal Complete</td>
+                                <td>Internet</td>
+                                <td>Gibi Systems</td>
+                                <td>06-21-2017</td>
+                                <td>
+                                    <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#prequalEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                                </td>
+                              </tr>
+                              <tr>
+                                  <td>Sudden Link</td>
+                                  <td>Prequal Complete</td>
+                                  <td>Internet</td>
+                                  <td>Gibi Systems</td>
+                                  <td>06-21-2017</td>
+                                  <td>
+                                      <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#prequalEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                    <td>Sudden Link</td>
+                                    <td>Prequal Complete</td>
+                                    <td>Internet</td>
+                                    <td>Gibi Systems</td>
+                                    <td>06-21-2017</td>
+                                    <td>
+                                        <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#prequalEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                      <td>Sudden Link</td>
+                                      <td>Prequal Complete</td>
+                                      <td>Internet</td>
+                                      <td>Gibi Systems</td>
+                                      <td>06-21-2017</td>
+                                      <td>
+                                          <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#prequalEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sudden Link</td>
+                                        <td>Prequal Complete</td>
+                                        <td>Internet</td>
+                                        <td>Gibi Systems</td>
+                                        <td>06-21-2017</td>
+                                        <td>
+                                            <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#prequalEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                                        </td>
+                                      </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                  </div>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                    <!-- <div class="col-md-6 com-md-push-3">
+                        <div class="list-group">
+                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-2">At&t</h5>
+                              <small>3 days ago</small>
+                            </div>
+                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                              risus varius blandit.</p>
+                            <small>Donec id elit non mi porta.</small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">Belk Inc</h5>
+                              <small class="text-muted">3 days ago</small>
+                            </div>
+                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                              risus varius blandit.</p>
+                            <small class="text-muted">Donec id elit non mi porta.</small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">List group item heading</h5>
+                              <small class="text-muted">3 days ago</small>
+                            </div>
+                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                              risus varius blandit.</p>
+                            <small class="text-muted">Donec id elit non mi porta.</small>
+                          </a>
+                        </div>
+                      </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-siteNotes" role="tabpanel" aria-labelledby="nav-siteNotes-tab">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <a href="#" class="float-right btn btn-primary" data-toggle="modal" data-target="#notesEditModal"><i class="fa fa-plus-circle mr-2"></i>create</a>
+                    <input type="text" class="form-control float-right mr-2" placeholder="search provider" style="width: 40%;">
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table id="myTable" class="table table-hover">
+                        <thead>
+                            <th>User</th>
+                            <th>Notes</th>
+                            <th>Date Created</th>
+                            <th>Date Updated</th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td>prashant</td>
+                              <td>
+                                  asda dasdas dasd asd asd asd asd as das d asd asd asd asdasd asdlasfa df adf a fafe fadfa adsfqefd dfadf dfsdfdsfd
+                              </td>
+                              <td>12-12-2018</td>
+                              <td>12-12-2018</td>
+                              <td>
+                            <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#notesEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>prashant</td>
+                              <td>
+                                  asda dasdas dasd asd asd asd asd as das d asd asd asd asdasd asdlasfa df adf a fafe fadfa adsfqefd dfadf dfsdfdsfd
+                              </td>
+                              <td>12-12-2018</td>
+                              <td>12-12-2018</td>
+                              <td>
+                            <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#notesEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                              </td>
+                            </tr>
+                          <tr>
+                              <td>prashant</td>
+                              <td>
+                                  asda dasdas dasd asd asd asd asd as das d asd asd asd asdasd asdlasfa df adf a fafe fadfa adsfqefd dfadf dfsdfdsfd
+                              </td>
+                              <td>12-12-2018</td>
+                              <td>12-12-2018</td>
+                              <td>
+                            <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#notesEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>prashant</td>
+                              <td>
+                                  asda dasdas dasd asd asd asd asd as das d asd asd asd asdasd asdlasfa df adf a fafe fadfa adsfqefd dfadf dfsdfdsfd
+                              </td>
+                              <td>12-12-2018</td>
+                              <td>12-12-2018</td>
+                              <td>
+                            <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#notesEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                              </td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                    <!-- <div class="col-md-6 com-md-push-3">
+                        <div class="list-group">
+                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-2">At&t</h5>
+                              <small>3 days ago</small>
+                            </div>
+                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                              risus varius blandit.</p>
+                            <small>Donec id elit non mi porta.</small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">Belk Inc</h5>
+                              <small class="text-muted">3 days ago</small>
+                            </div>
+                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                              risus varius blandit.</p>
+                            <small class="text-muted">Donec id elit non mi porta.</small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">List group item heading</h5>
+                              <small class="text-muted">3 days ago</small>
+                            </div>
+                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                              risus varius blandit.</p>
+                            <small class="text-muted">Donec id elit non mi porta.</small>
+                          </a>
+                        </div>
+                      </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-dispatch" role="tabpanel" aria-labelledby="nav-dispatch-tab">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <a href="#" class="float-right btn btn-primary" data-toggle="modal" data-target="#dispatchEditModal"><i class="fa fa-plus-circle mr-3"></i>create</a>
+                    <input type="text" class="form-control float-right mr-2" placeholder="search provider" style="width: 40%;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-circuit" role="tabpanel" aria-labelledby="nav-circuit-tab">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <a href="#" class="float-right btn btn-primary" data-toggle="modal" data-target="#circuitEditModal"><i class="fa fa-plus-circle mr-3"></i>create</a>
+                    <input type="text" class="form-control float-right mr-2" placeholder="search provider" style="width: 40%;">
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-hover">
+                            <thead>
+                            <th>Circuit Name</th>
+                            <th>Circuit Status</th>
+                            <th>Circuit Provider</th>
+                            <th>Circuit Function</th>
+                            <th>Service Type</th>
+                            <th>Ownership Level</th>
+                            <th></th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                              <td>Belk_667_cell</td>
+                              <td>3-Production</td>
+                              <td>At&T</td>
+                              <td>VoIP</td>
+                              <td>Mobile Wireless</td>
+                              <td>S2S Provisional</td>
+                              <td>
+                                  <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#circuitEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                                <td>Belk_667_cell</td>
+                                <td>3-Production</td>
+                                <td>At&T</td>
+                                <td>VoIP</td>
+                                <td>Mobile Wireless</td>
+                                <td>S2S Provisional</td>
+                                <td>
+                                    <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#prequalEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>Belk_667_cell</td>
+                                  <td>3-Production</td>
+                                  <td>At&T</td>
+                                  <td>VoIP</td>
+                                  <td>Mobile Wireless</td>
+                                  <td>S2S Provisional</td>
+                                  <td>
+                                      <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#prequalEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Belk_667_cell</td>
+                                    <td>3-Production</td>
+                                    <td>At&T</td>
+                                    <td>VoIP</td>
+                                    <td>Mobile Wireless</td>
+                                    <td>S2S Provisional</td>
+                                    <td>
+                                        <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#prequalEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                      <td>Belk_667_cell</td>
+                                      <td>3-Production</td>
+                                      <td>At&T</td>
+                                      <td>VoIP</td>
+                                      <td>Mobile Wireless</td>
+                                      <td>S2S Provisional</td>
+                                      <td>
+                                          <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#prequalEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                                      </td>
+                                    </tr>
+
+                            </tbody>
+                          </table>
+                    </div>
+                  </div>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-devices" role="tabpanel" aria-labelledby="nav-devices-tab">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <a href="#" class="float-right btn btn-primary" data-toggle="modal" data-target="#deviceEditModal"><i class="fa fa-plus-circle mr-3"></i>create</a>
+                    <input type="text" class="form-control float-right mr-2" placeholder="search provider" style="width: 40%;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End PAge Content -->
+    <!-- ============================================================== -->
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Container fluid  -->
+  <!-- ============================================================== -->
+  <!-- Modal for Edit Profile -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel1">UPDATE PROFILE</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="admin_id" class="control-label">Username</label>
+                <input type="text" class="form-control" id="admin_id" value="aadmin" disabled>
+              </div>
+              <div class="form-group">
+                <label for="first_name" class="control-label">First Name</label>
+                <input type="text" class="form-control" id="first_name" value="admin">
+              </div>
+              <div class="form-group">
+                <label for="last_name" class="control-label">Last Name</label>
+                <input type="text" class="form-control" id="last_name" value="admin">
+              </div>
+              <div class="form-group">
+                <label for="email" class="control-label">E-Mail</label>
+                <input type="email" class="form-control" id="email" value="admin@provisioning.com">
+              </div>
+              <div class="form-group">
+                <label for="password" class="control-label">Password</label>
+                <input type="password" class="form-control" id="password" value="****">
+              </div>
+              <div class="form-group">
+                <label for="confirm_password" class="control-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirm_password" value="****">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success btn-block"><i class="ti-save"></i> Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="prequalEditModal" tabindex="-1" role="dialog" aria-labelledby="prequalEditModal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel1">PreQualification</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <form class="form">
+              <div class="form-group row  mt-2">
+                <label class="col-md-3 col-form-label required">Provider</label>
+                <div class="col-md-9">
+                  <select class="custom-select col-12">
+                    <option value="1">AT&T</option>
+                    <option value="2">Spectrum</option>
+                    <option value="3">SuddenLink</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label  class="col-md-3 col-form-label required">Requestor</label>
+                <div class="col-md-9">
+                  <input type="text" id="company_name" class="form-control" value="Gibi Systems">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label required">Owner</label>
+                <div class="col-md-9">
+                  <input type="text" id="owner" class="form-control" value="Gibi Systems">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label  required">Date Requested</label>
+                <div class="col-md-9">
+                  <input type="text" id="date" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label required">Service Type</label>
+                <div class="col-md-9">
+                  <select class="custom-select col-12">
+                    <option value="1">Cable</option>
+                    <option value="2">ADSL</option>
+                    <option value="3">DIA Fiber</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label required">Action</label>
+                <div class="col-md-9">
+                  <select class="custom-select col-12">
+                    <option value="state">Pending Prequal</option>
+                    <option value="state">Prequal Complete</option>
+                    <option value="state">Pending Pricing</option>
+                    <option value="state">Pricing Complete</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label">ISP Rep Name</label>
+                <div class="col-md-9">
+                  <input type="text" id="created_by" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label">ISP Rep Phone</label>
+                <div class="col-md-9">
+                  <input type="text" id="created_by" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label">ISP Rep Email</label>
+                <div class="col-md-9">
+                  <input type="text" id="created_by" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label required">Record Status</label>
+                <div class="col-md-9">
+                  <select class="custom-select col-12">
+                    <option value="state">Active</option>
+                    <option value="state">Closed</option>
+                    <option value="state">No Service</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label">Circuit</label>
+                <div class="col-md-9">
+                  <input type="text" id="circuit" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label">Notes</label>
+                <div class="col-md-9">
+                  <textarea class="form-control" rows="4" id="comments"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                  <label class="col-md-3 col-form-label">General Site Notes</label>
+                  <div class="col-md-9">
+                    <textarea class="form-control" rows="2" id="comments"></textarea>
+                  </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success m-auto"><i class="ti-save" style="margin-right:.3rem;"></i> Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="notesEditModal" tabindex="-1" role="dialog" aria-labelledby="notesEditModal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel1">Site Notes</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <form class="form">
+              <div class="form-group row mt-2">
+                <label class="col-md-2 col-form-label">Notes</label>
+                <div class="col-md-10">
+                  <textarea class="form-control" rows="4" id="techNotes"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label  class="col-md-2 col-form-label required">Created By</label>
+                <div class="col-md-10">
+                  <input type="text" id="createdBy" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label required">Created Date</label>
+                <div class="col-md-10">
+                  <input type="text" id="createdDate" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label">Modified By</label>
+                <div class="col-md-10">
+                  <input type="text" id="modifiedBy" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label">Modified Date</label>
+                <div class="col-md-10">
+                  <input type="text" id="modifiedDate" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label"></label>
+                <div class="col-md-10">
+                  <select class="custom-select col-12">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success m-auto"><i class="ti-save" style="margin-right:.3rem;"></i> Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="dispatchEditModal" tabindex="-1" role="dialog" aria-labelledby="dispatchEditModal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel1">Some Tech Dispatch</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <form class="form">
+              <div class="form-group row mt-2">
+                <label  class="col-md-3 col-form-label required">Tech Dispatch Date</label>
+                <div class="col-md-9">
+                  <input type="text" id="techDispatchDate" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label required">Tech Provider</label>
+                <div class="col-md-9">
+                  <select class="custom-select col-12">
+                    <option value="1">ACS</option>
+                    <option value="2">Alliance</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row  mt-2">
+                <label class="col-md-3 col-form-label required">Circuit_ID</label>
+                <div class="col-md-9">
+                  <select class="custom-select col-12">
+                    <option value="1">Cable</option>
+                    <option value="2">Cellular Wireless</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label  class="col-md-3 col-form-label required">Tech Name</label>
+                <div class="col-md-9">
+                  <input type="text" id="techName" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label required">Tech Phone Number</label>
+                <div class="col-md-9">
+                  <input type="text" id="techPhoneNumber" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label">Tech Notes</label>
+                <div class="col-md-9">
+                  <textarea class="form-control" rows="4" id="techNotes"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-md-3 col-md-9">
+                  <label class="custom-control custom-checkbox m-b-0">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-label">Billable</span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success m-auto"><i class="ti-save" style="margin-right:.3rem;"></i> Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="circuitEditModal" tabindex="-1" role="dialog" aria-labelledby="circuitEditModal">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel1">Circuit Information</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <nav class="bg-white">
+                      <div class="nav nav-pills nav-fill" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-generainfo-tab" data-toggle="tab" href="#nav-general-info" role="tab"
+                          aria-controls="nav-general-info" aria-selected="true">General Info</a>
+                        <a class="nav-item nav-link" id="nav-billing-tab" data-toggle="tab" href="#nav-billing" role="tab"
+                          aria-controls="nav-billing" aria-selected="false">Billing</a>
+                        <a class="nav-item nav-link" id="nav-dates-tab" data-toggle="tab" href="#nav-dates" role="tab"
+                          aria-controls="nav-dates" aria-selected="false">Dates</a>
+                        <a class="nav-item nav-link" id="nav-other-dates-tab" data-toggle="tab" href="#nav-other-dates" role="tab"
+                          aria-controls="nav-other-dates" aria-selected="false">Other Dates</a>
+                        <a class="nav-item nav-link" id="nav-cellular-info-tab" data-toggle="tab" href="#nav-cellular-info" role="tab"
+                          aria-controls="nav-cellular-info" aria-selected="false">Cellular Info</a>
+                        <a class="nav-item nav-link" id="nav-modem-info-tab" data-toggle="tab" href="#nav-modem-info" role="tab"
+                          aria-controls="nav-modem-info" aria-selected="false">Modem Info</a>
+                        <a class="nav-item nav-link" id="nav-ip-info-tab" data-toggle="tab" href="#nav-ip-info" role="tab"
+                          aria-controls="nav-ip-info" aria-selected="false">IP Info</a>
+                        <a class="nav-item nav-link" id="nav-notes-info-tab" data-toggle="tab" href="#nav-notes-info" role="tab"
+                          aria-controls="nav-notes-info" aria-selected="false">Notes Info</a>
+                        <a class="nav-item nav-link" id="nav-old-notes-tab" data-toggle="tab" href="#nav-old-notes" role="tab"
+                          aria-controls="nav-old-notes" aria-selected="false">Old Notes</a>
+                        <a class="nav-item nav-link" id="attachments" data-toggle="tab" href="#nav-attachments" role="tab"
+                          aria-controls="nav-attachments" aria-selected="false">Attachments</a>
+                      </div>
+                    </nav>
+                  </div>
+                  <div class="card-body">
+                    <div class="tab-content" id="nav-tabContent-circuit">
+                      <div class="tab-pane fade show active" id="nav-general-info" role="tabpanel" aria-labelledby="nav-site-tab">
+                        <form class="form">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Circuit ID</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Circuit Name</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Status</label>
+                                <div class="col-md-8">
+                                  <select class="form-control custom-select" tabindex="1">
+                                      <option value="state">2-Order Place</option>
+                                      <option value="state">3-Production</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Friendly Name</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Circuit Rank</label>
+                                <div class="col-md-8">
+                                <select class="form-control custom-select" tabindex="1">
+                                  <option value="state">Data</option>
+                                  <option value="state">Primary</option>
+                                  <option value="state">Secondary</option>
+                                </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">ID (goc)</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4  required">ID (Billing)</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4  required">Circuit Provider</label>
+                                <div class="col-md-8">
+                                  <select class="form-control custom-select" tabindex="1">
+                                    <option value="state">AT&T</option>
+                                    <option value="state">Spectrum</option>
+                                    <option value="state">SuddenLink</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Circuit Purpose</label>
+                                <div class="col-md-8">
+                                  <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
+                                      <option value="state">CCTV</option>
+                                      <option value="state">Data</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Service Type</label>
+                                <div class="col-md-8">
+                                  <select class="form-control custom-select" tabindex="1">
+                                      <option value="state">Fios</option>
+                                      <option value="state">Fios Internet</option>
+                                      <option value="state">SuddenLink</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4">Circuit Urgency</label>
+                                <div class="col-md-8 custom-checkbox m-b-0">
+                                    <input type="checkbox" class="custom-control-input">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Management Level</label>
+                                <div class="col-md-8">
+                                  <select class="form-control custom-select" tabindex="1">
+                                      <option value="state">Reactive</option>
+                                      <option value="state">Proactive</option>
+                                      <option value="state">Internal Proactive</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Ownership Level</label>
+                                <div class="col-md-8">
+                                  <select class="form-control custom-select" tabindex="1">
+                                      <option value="state">S2S Provisioned</option>
+                                      <option value="state">Customer Provisioned</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">National Acct #</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Child Acct#</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Parent Acct#</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Local Acct #</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Local LEC</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Speed Down</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Speed Up</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Circuit Install Phone #</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Tech Support Phone #</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label col-md-4 required">Account Password</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="offset-md-4 col-md-8">
+                                <label class="custom-control custom-checkbox m-b-0">
+                                  <input type="checkbox" class="custom-control-input">
+                                  <span class="custom-control-label">Circuit Urgency</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-2 required">Equipment Location</label>
+                                <div class="col-md-10">
+                                  <textarea class="form-control" rows="4" id="comments"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="nav-billing" role="tabpanel" aria-labelledby="nav-site-tab">
+                        <form class="form">
+                          <div class="form-group row  mt-2">
+                            <label  class="col-md-2 col-form-label required">Bill Start Date</label>
+                            <div class="col-md-6">
+                              <input type="text" id="company_name" class="form-control" value="Gibi Systems">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-2 col-form-label required">Bill End Date</label>
+                            <div class="col-md-6">
+                              <input type="text" id="owner" class="form-control" value="Gibi Systems">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-2 col-form-label  required">Rebate Type</label>
+                            <div class="col-md-6">
+                              <input type="text" id="date" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-2 col-form-label">Rebate Amount</label>
+                            <div class="col-md-6">
+                              <input type="text" id="created_by" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-2 col-form-label">Early Term Fees</label>
+                            <div class="col-md-6">
+                              <input type="text" id="created_by" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-2 col-form-label">ISP Contract Terms</label>
+                            <div class="col-md-6">
+                              <input type="text" id="created_by" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-2 col-form-label">ISP Contract End Date</label>
+                            <div class="col-md-6">
+                              <input type="text" id="circuit" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-2 col-form-label">Audit Date</label>
+                            <div class="col-md-6">
+                              <input type="text" id="circuit" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-2 col-form-label">Online Access Codes</label>
+                            <div class="col-md-6">
+                              <textarea class="form-control" rows="4" id="comments"></textarea>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="offset-md-2 col-md-6">
+                              <label class="custom-control custom-checkbox m-b-0">
+                                <input type="checkbox" class="custom-control-input">
+                                <span class="custom-control-label">Billing Address Verified</span>
+                              </label>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="nav-dates" role="tabpanel" aria-labelledby="nav-site-tab">
+                        <form class="form">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Customer Order Date</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Order Cancel Date</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">ISP Order Date</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Last Upgrade Date</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">FOC Date</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">S2S Test Date</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Cognizant OnBoard Date</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4  required">Cognizant DeBoard Date</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Cognizant SR No</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">FST Dispatch Date</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Scheduled Install Date</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Disconnect Date</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Actual Install Date</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="nav-other-dates" role="tabpanel" aria-labelledby="nav-site-tab">
+                        <form class="form">
+                          <div class="form-group row">
+                            <label  class="col-md-3 col-form-label required">Site Survey Order Date</label>
+                            <div class="col-md-9">
+                              <input type="text" id="company_name" class="form-control" value="Gibi Systems">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-3 col-form-label required">Site Survey Completed Date</label>
+                            <div class="col-md-9">
+                              <input type="text" id="owner" class="form-control" value="Gibi Systems">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-3 col-form-label  required">Site Survey End Date</label>
+                            <div class="col-md-9">
+                              <input type="text" id="date" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Internet End Date</label>
+                            <div class="col-md-9">
+                              <input type="text" id="created_by" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Connection Scheduled Date</label>
+                            <div class="col-md-9">
+                              <input type="text" id="created_by" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Connection Completed Date</label>
+                            <div class="col-md-9">
+                              <input type="text" id="created_by" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Connection End Date</label>
+                            <div class="col-md-9">
+                              <input type="text" id="circuit" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Dev Shipped</label>
+                            <div class="col-md-9">
+                              <input type="text" id="circuit" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Dev Shipped Date</label>
+                            <div class="col-md-9">
+                              <input type="text" id="circuit" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Dev Track No</label>
+                            <div class="col-md-9">
+                              <input type="text" id="circuit" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-3 col-form-label">FST Name</label>
+                            <div class="col-md-9">
+                              <input type="text" id="circuit" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-3 col-form-label">FST Number</label>
+                            <div class="col-md-9">
+                              <input type="text" id="circuit" class="form-control">
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="nav-cellular-info" role="tabpanel" aria-labelledby="nav-site-tab">
+                        <form class="form">
+                          <div class="form-group row">
+                            <label  class="col-md-2 col-form-label required">Modem ESN IMEI MEID</label>
+                            <div class="col-md-6">
+                              <input type="text" id="company_name" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label  class="col-md-2 col-form-label required">Modem CPE ICCID</label>
+                            <div class="col-md-6">
+                              <input type="text" id="company_name" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="control-label col-md-2 required">Data Plan</label>
+                            <div class="col-md-6">
+                              <select class="form-control custom-select" tabindex="1">
+                                  <option value="state">1 GB</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label  class="col-md-2 col-form-label required">Cell Pool Name</label>
+                            <div class="col-md-6">
+                              <input type="text" id="company_name" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="control-label col-md-2 required">Cell Cycle Date</label>
+                            <div class="col-md-6">
+                                <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                              <div class="offset-md-2 col-md-6">
+                                <label class="custom-control custom-checkbox m-b-0">
+                                  <input type="checkbox" class="custom-control-input">
+                                  <span class="custom-control-label">Circuit Pooled</span>
+                                </label>
+                              </div>
+                            </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="nav-modem-info" role="tabpanel" aria-labelledby="nav-site-tab">
+                        <form class="form">
+                          <div class="form-group row">
+                            <label class="control-label col-md-3 required">CPE Ownership</label>
+                            <div class="col-md-9">
+                              <select class="form-control custom-select" tabindex="1">
+                                  <option value="state">1 GB</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label  class="col-md-3 col-form-label required">CPE Make/Model</label>
+                            <div class="col-md-9">
+                              <input type="text" id="company_name" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label  class="col-md-3 col-form-label required">CPE Serial Number</label>
+                            <div class="col-md-9">
+                              <input type="text" id="company_name" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label  class="col-md-3 col-form-label required">CPE MAC Address</label>
+                            <div class="col-md-9">
+                              <input type="text" id="company_name" class="form-control">
+                            </div>
+                          </div>  
+                          <div class="form-group row">
+                            <label  class="col-md-3 col-form-label required">CPE Login</label>
+                            <div class="col-md-9">
+                              <input type="text" id="company_name" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label  class="col-md-3 col-form-label required">CPE Password</label>
+                            <div class="col-md-9">
+                              <input type="text" id="company_name" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="control-label col-md-3 required">CPE Configuration Type</label>
+                            <div class="col-md-9">
+                              <select class="form-control custom-select" tabindex="1">
+                                  <option value="state">1 GB</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label  class="col-md-3 col-form-label required">CPE Return Received Date</label>
+                            <div class="col-md-9">
+                              <input type="text" id="company_name" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="control-label col-md-3 required">CPE Returned to ISP Date</label>
+                            <div class="col-md-9">
+                                <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="control-label col-md-3 required">CPE Returned to ISP Tracking #</label>
+                            <div class="col-md-9">
+                                <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="control-label col-md-3 required">CPE Recycled Date</label>
+                            <div class="col-md-9">
+                                <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="nav-ip-info" role="tabpanel" aria-labelledby="nav-site-tab">
+                        <form class="form">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Device</label>
+                                  <div class="col-md-8">
+                                    <select class="form-control custom-select" tabindex="1">
+                                        <option value="state">option 1</option>
+                                        <option value="state">option 2</option>
+                                    </select>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">IP Addressing Type</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="IPAddressingType" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Speed (Down)</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="SpeedDown" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Test Speed Down</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="TestSpeedDown" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Speed (Up)</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="SpeedUp" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Test Speed Up</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="TestSpeedUp" class="form-control" value="Cellular Wireless.1">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4  required">Monitored IP Address</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="MonitoredIPAddress" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4  required">Other IP</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="OtherIP" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Monitored IP Attached Device</label>
+                                <div class="col-md-8">
+                                  <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
+                                      <option value="state">option 1</option>
+                                      <option value="state">option 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                  <label class="control-label text-right col-md-4 required">Inside Public Network</label>
+                                  <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4">Outside Public Network</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="OutsidePublicNetwork" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div> 
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Inside Public Usable Range</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="InsidePublicUsableRange" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                  <label class="control-label text-right col-md-4 required">Inside Public Gateway</label>
+                                  <div class="col-md-8">
+                                    <input type="text" id="InsidePublicGateway" class="form-control" value="Belk_667_Cellular Wireless">
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Outside Public Gateway</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="OutsidePublicGateway" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Inside Public Mask</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="InsidePublicMask" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Outside Public Mask</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="OutsidePublicMask" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Inside Public Assigned Devices</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="InsidePublicAssignedDevices" class="form-control" value="Cellular Wireless.1">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Outside Public Router IP</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="OutsidePublicRouterIP" class="form-control" value="Belk_667_Cellular Wireless">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Inside Subnet Prefix</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="InsideSubnetPrefix" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">ISP DNS 1</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="ISPDNS1" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">ISP DNS 2</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="ISPDNS2" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">PPoE Username</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="PPoEUsername" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                  <label class="control-label text-right col-md-4 required">PPoE Password</label>
+                                  <div class="col-md-8">
+                                    <input type="text" id="PPoEPassword" class="form-control" value="">
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                <div class="offset-md-4 col-md-8">
+                                  <label class="custom-control custom-checkbox m-b-0">
+                                    <input type="checkbox" class="custom-control-input">
+                                    <span class="custom-control-label">Monitored IP Pingable</span>
+                                  </label>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                              <div class="offset-md-4 col-md-8">
+                                <label class="custom-control custom-checkbox m-b-0">
+                                  <input type="checkbox" class="custom-control-input">
+                                  <span class="custom-control-label">Other IP Pingable</span>
+                                </label>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="nav-notes-info" role="tabpanel" aria-labelledby="nav-site-tab">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-group row">
+                              <label class="control-label col-md-12 required">Notes</label>
+                              <div class="col-md-12">
+                                <textarea class="form-control" rows="2" value="" id="comments"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-2">
+                            <div class="form-group row">
+                              <label class="control-label col-md-12 required">Created By</label>
+                              <div class="col-md-12">
+                                  <textarea class="form-control" rows="2" id="comments"></textarea>
+                              </div>
+                            </div>
+                          </div>                                   
+                          <div class="col-md-2">
+                            <div class="form-group row">
+                              <label class="control-label col-md-12 required">Created date</label>
+                              <div class="col-md-12">
+                                  <textarea class="form-control" rows="2" id="comments"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-2">
+                            <div class="form-group row">
+                              <label class="control-label col-md-12 required">Modified By</label>
+                              <div class="col-md-12">
+                                  <textarea class="form-control" rows="2" id="comments"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-2">
+                            <div class="form-group row">
+                              <label class="control-label col-md-12 required">Modified date</label>
+                              <div class="col-md-12">
+                                <textarea class="form-control" rows="2" id="comments"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </div> 
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-group row">
+                              <div class="col-md-12">
+                                <textarea class="form-control" rows="2" id="comments"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-2">
+                            <div class="form-group row">
+                              <div class="col-md-12">
+                                  <textarea class="form-control" rows="2" id="comments"></textarea>
+                              </div>
+                            </div>
+                          </div>                                   
+                          <div class="col-md-2">
+                            <div class="form-group row">
+                              <div class="col-md-12">
+                                  <textarea class="form-control" rows="2" id="comments"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-2">
+                            <div class="form-group row">
+                              <div class="col-md-12">
+                                  <textarea class="form-control" rows="2" id="comments"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-2">
+                            <div class="form-group row">
+                              <div class="col-md-12">
+                                <textarea class="form-control" rows="2" id="comments"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </div> 
+                      </div>
+                      <div class="tab-pane fade" id="nav-old-notes" role="tabpanel" aria-labelledby="nav-site-tab">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group row">
+                              <div class="col-md-12">
+                                <textarea class="form-control" rows="4" value="" id="comments"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </div> 
+                      </div>
+                      <div class="tab-pane fade" id="nav-attachments" role="tabpanel" aria-labelledby="nav-site-tab">
+                          <div class="form-group row">
+                            <label  class="col-md-3 col-form-label required">Attachments</label>
+                            <div class="col-md-9">
+                              <input type="file" id="attachment" class="form-control">
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+
+                    <!-- <div class="col-md-6 com-md-push-3">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-2">At&t</h5>
+                                    <small>3 days ago</small>
+                                  </div>
+                                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                    risus varius blandit.</p>
+                                  <small>Donec id elit non mi porta.</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Belk Inc</h5>
+                                    <small class="text-muted">3 days ago</small>
+                                  </div>
+                                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                    risus varius blandit.</p>
+                                  <small class="text-muted">Donec id elit non mi porta.</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">List group item heading</h5>
+                                    <small class="text-muted">3 days ago</small>
+                                  </div>
+                                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                    risus varius blandit.</p>
+                                  <small class="text-muted">Donec id elit non mi porta.</small>
+                                </a>
+                              </div>
+                            </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success m-auto"><i class="ti-save" style="margin-right:.3rem;"></i> Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="deviceEditModal" tabindex="-1" role="dialog" aria-labelledby="deviceEditModal">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel1">Circuit Information</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <nav class="bg-white">
+                      <div class="nav nav-pills nav-fill" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-device-info-tab" data-toggle="tab" href="#nav-device-info" role="tab"
+                          aria-controls="nav-device-info" aria-selected="true">Device Info</a>
+                        <a class="nav-item nav-link" id="nav-configuration-info-tab" data-toggle="tab" href="#nav-configuration-info" role="tab"
+                          aria-controls="nav-configuration-info" aria-selected="false">Configuration Info</a>
+                        <a class="nav-item nav-link" id="nav-date-tab" data-toggle="tab" href="#nav-date" role="tab"
+                          aria-controls="nav-date" aria-selected="false">Date</a>
+                        <a class="nav-item nav-link" id="nav-notes-tab" data-toggle="tab" href="#nav-notes" role="tab"
+                          aria-controls="nav-notes" aria-selected="false">Notes</a>                            
+                      </div>
+                    </nav>
+                  </div>
+                  <div class="card-body">
+                    <div class="tab-content" id="nav-tabContent-circuit">
+                      <div class="tab-pane fade show active" id="nav-device-info" role="tabpanel" aria-labelledby="nav-site-tab">
+                        <form class="form">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Device ID</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Record Id (Goc)</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Record Id (Billing)</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Record Type</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Device Status</label>
+                                <div class="col-md-8">
+                                <select class="form-control custom-select" tabindex="1">
+                                  <option value="Order Placed">Order Placed</option>
+                                  <option value="Shipped">Shipped</option>
+                                  <option value="Production">Production</option>
+                                  <option value="Cancelled">Cancelled</option>
+                                </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Management Level</label>
+                                <div class="col-md-8">
+                                <select class="form-control custom-select" tabindex="1">
+                                  <option value="Fully Managed">Fully Managed</option>
+                                  <option value="Monitored">Monitored</option>
+                                  <option value="Ship Only">Ship Only</option>
+                                  <option value="None">None</option>
+                                  <option value="Managed Network">Managed Network</option>
+                                  <option value="Proactive External">Proactive External</option>
+                                  <option value="Proactive Internal">Proactive Internal</option>
+                                  <option value="Reactive">Reactive</option>
+                                </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Ownership Level</label>
+                                <div class="col-md-8">
+                                <select class="form-control custom-select" tabindex="1">
+                                  <option value="Order Placed">Customer Owned</option>                                        
+                                </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Device Type</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Maintanence Contract Id</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4">Serial Number</label>
+                                <div class="col-md-8">
+                                  <input type="text" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4">OS Version</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                          </div>                               
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Maintanence Contact Type</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">Maintanence Contact Expiry Date</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">License Id</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">License Type</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">License Expiry Date</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>  
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-2 required">Equipment Location</label>
+                                <div class="col-md-10">
+                                  <textarea class="form-control" rows="4" id="comments"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>  
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="nav-configuration-info" role="tabpanel" aria-labelledby="nav-site-tab">
+                        <form class="form">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">Host Name</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">LAN 1 Network</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">Loopback IP</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">LAN 1 IP</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">WAN 1 IP</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">LAN 1 Gateway</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                  <label class="control-label text-right col-md-3 required">WAN 1 Attached Circuit</label>
+                                  <div class="col-md-9">
+                                  <select class="form-control custom-select" tabindex="1">
+                                    <option value="Order Placed"></option>
+                                    <option value="Shipped"></option>                                          
+                                  </select>
+                                  </div>                                      
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                  <label class="control-label text-right col-md-3 required">LAN 1 Mask</label>
+                                  <div class="col-md-9">
+                                      <input type="text" id="circuit-id" class="form-control" value="">
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">WAN 2 IP</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">LAN 2 Network</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>                                  
+                          </div>                              
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                  <label class="control-label text-right col-md-3 required">WAN 2 Attached Circuit</label>
+                                  <div class="col-md-9">
+                                  <select class="form-control custom-select" tabindex="1">
+                                    <option value="Order Placed"></option>
+                                    <option value="Shipped"></option>                                          
+                                  </select>
+                                  </div>                                      
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                  <label class="control-label text-right col-md-3 required">LAN 2 IP</label>
+                                  <div class="col-md-9">
+                                      <input type="text" id="circuit-id" class="form-control" value="">
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">DHCP Service</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">LAN 2 Gateway</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>                                  
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">Crypto Key</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">LAN 2 Mask</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>                                  
+                          </div> 
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">Monitored IP Address</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">LAN 3 Network</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>                                  
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">OOBM Number</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">LAN 3 IP</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>                                  
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">OOBM Password</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">LAN 3 Gateway</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>                                  
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-3 required">LAN 3 Mask</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>                                                                    
+                          </div>                                
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="nav-date" role="tabpanel" aria-labelledby="nav-site-tab">
+                        <form class="form">
+                          <div class="form-group row">
+                            <label class="control-label text-right col-md-3 required">Ship date</label>
+                            <div class="col-md-9">
+                              <input type="text" id="circuit-id" class="form-control" value="">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="control-label text-right col-md-3 required">Ship Tracking</label>
+                            <div class="col-md-9">
+                              <textarea class="form-control" rows="4" id="comments"></textarea>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="control-label text-right col-md-3 required">Installation Date</label>
+                            <div class="col-md-9">
+                              <input type="text" id="installationDate" class="form-control" value="">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="control-label text-right col-md-3 required">Disconnect Date</label>
+                            <div class="col-md-9">
+                              <input type="text" id="disconnectDate" class="form-control" value="">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="control-label text-right col-md-3 required">Return Date</label>
+                            <div class="col-md-9">
+                              <input type="text" id="returnDate" class="form-control" value="">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="control-label text-right col-md-3 required">License Start Date</label>
+                            <div class="col-md-9">
+                              <input type="text" id="licenseStartDate" class="form-control" value="">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="control-label text-right col-md-3 required">License End Date</label>
+                            <div class="col-md-9">
+                              <input type="text" id="licenseEndDate" class="form-control" value="">
+                            </div>
+                          </div>                                                         
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="nav-notes" role="tabpanel" aria-labelledby="nav-site-tab">
+                        <form class="form">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <div class="form-group row">
+                                <label class="control-label col-md-12 required">Notes</label>
+                                <div class="col-md-12">
+                                  <textarea class="form-control" rows="2" id="comments"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group row">
+                                <label class="control-label col-md-12 required">Created By</label>
+                                <div class="col-md-12">
+                                    <textarea class="form-control" rows="2" id="comments"></textarea>
+                                </div>
+                              </div>
+                            </div>                                   
+                            <div class="col-md-2">
+                              <div class="form-group row">
+                                <label class="control-label col-md-12 required">Created date</label>
+                                <div class="col-md-12">
+                                  <textarea class="form-control" rows="2" id="comments"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-2">
+                              <div class="form-group row">
+                                <label class="control-label col-md-12 required">Modified By</label>
+                                <div class="col-md-12">
+                                  <textarea class="form-control" rows="2" id="comments"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-2">
+                              <div class="form-group row">
+                                <label class="control-label col-md-12 required">Modified date</label>
+                                <div class="col-md-12">
+                                  <textarea class="form-control" rows="2" id="comments"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>                                                                                                                     
+                        </form>
+                      </div>                           
+                    </div>
+
+                    <!-- <div class="col-md-6 com-md-push-3">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-2">At&t</h5>
+                                    <small>3 days ago</small>
+                                  </div>
+                                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                    risus varius blandit.</p>
+                                  <small>Donec id elit non mi porta.</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Belk Inc</h5>
+                                    <small class="text-muted">3 days ago</small>
+                                  </div>
+                                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                    risus varius blandit.</p>
+                                  <small class="text-muted">Donec id elit non mi porta.</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">List group item heading</h5>
+                                    <small class="text-muted">3 days ago</small>
+                                  </div>
+                                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                                    risus varius blandit.</p>
+                                  <small class="text-muted">Donec id elit non mi porta.</small>
+                                </a>
+                              </div>
+                            </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+
+                  <button type="button" class="btn btn-success m-auto"><i class="ti-save" style="margin-right:.3rem;"></i> Save</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Page wrapper  -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- footer -->
+  <!-- ============================================================== -->
+  <footer class="footer text-center">
+    © 2018 S2S COMMUNICATIONS
+  </footer>
+  <!-- ============================================================== -->
+  <!-- End footer -->
+  <!-- ============================================================== -->
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Wrapper -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- All Jquery -->
+  <!-- ============================================================== -->
+  <script src="../assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+  <!-- Bootstrap popper Core JavaScript -->
+  <script src="../assets/node_modules/popper/popper.min.js"></script>
+  <script src="../assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- slimscrollbar scrollbar JavaScript -->
+  <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+  <!--Wave Effects -->
+  <script src="dist/js/waves.js"></script>
+  <!--Menu sidebar -->
+  <script src="dist/js/sidebarmenu.js"></script>
+  <!--Custom JavaScript -->
+  <script src="dist/js/custom.min.js"></script>
+  <!-- Dashboard 1 JS -->
+  <script src="dist/js/dashboard1.js"></script>
+  <!-- DatePicker JS -->
+  <script src="../assets/node_modules/moment/moment.js"></script>
+  <script src="../assets/node_modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+
+</body>
+
+</html>

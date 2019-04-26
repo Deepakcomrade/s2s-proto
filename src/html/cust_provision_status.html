@@ -240,8 +240,6 @@
               aria-controls="nav-site" aria-selected="true">Site Details</a>
             <a class="nav-item nav-link" id="nav-quote-tab" data-toggle="tab" href="#nav-quote" role="tab"
               aria-controls="nav-quote" aria-selected="false">PreQualification</a>
-            <a class="nav-item nav-link" id="nav-siteNotes-tab" data-toggle="tab" href="#nav-siteNotes" role="tab"
-              aria-controls="nav-site" aria-selected="true">Site Notes</a>
             <a class="nav-item nav-link" id="nav-dispatch-tab" data-toggle="tab" href="#nav-dispatch" role="tab"
               aria-controls="nav-dispatch" aria-selected="false">Tech Dispatch</a>
             <a class="nav-item nav-link" id="nav-circuit-tab" data-toggle="tab" href="#nav-circuit" role="tab"
@@ -392,6 +390,125 @@
                 </div>
               </div>
             </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    Site Notes
+                    <a href="#" class="float-right btn btn-primary" data-toggle="modal" data-target="#notesEditModal"><i class="fa fa-plus-circle mr-2"></i>create</a>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table id="myTable" class="table table-hover">
+                        <thead>
+                          <th>User</th>
+                          <th>Notes</th>
+                          <th>Date Created</th>
+                          <th>Date Updated</th>
+                          <th></th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>prashant</td>
+                            <td>
+                                asda dasdas dasd asd asd asd asd as das d asd asd asd asdasd asdlasfa df adf a fafe fadfa adsfqefd dfadf dfsdfdsfd
+                            </td>
+                            <td>12-12-2018</td>
+                            <td>12-12-2018</td>
+                            <td>
+                                <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#notesEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>prashant</td>
+                            <td>
+                                asda dasdas dasd asd asd asd asd as das d asd asd asd asdasd asdlasfa df adf a fafe fadfa adsfqefd dfadf dfsdfdsfd
+                            </td>
+                            <td>12-12-2018</td>
+                            <td>12-12-2018</td>
+                            <td>
+                          <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#notesEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>prashant</td>
+                            <td>
+                                asda dasdas dasd asd asd asd asd as das d asd asd asd asdasd asdlasfa df adf a fafe fadfa adsfqefd dfadf dfsdfdsfd
+                            </td>
+                            <td>12-12-2018</td>
+                            <td>12-12-2018</td>
+                            <td>
+                                <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#notesEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>prashant</td>
+                            <td>
+                                asda dasdas dasd asd asd asd asd as das d asd asd asd asdasd asdlasfa df adf a fafe fadfa adsfqefd dfadf dfsdfdsfd
+                            </td>
+                            <td>12-12-2018</td>
+                            <td>12-12-2018</td>
+                            <td>
+                              <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#notesEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                    <!-- <div class="col-md-6 com-md-push-3">
+                        <div class="list-group">
+                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-2">At&t</h5>
+                              <small>3 days ago</small>
+                            </div>
+                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                              risus varius blandit.</p>
+                            <small>Donec id elit non mi porta.</small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">Belk Inc</h5>
+                              <small class="text-muted">3 days ago</small>
+                            </div>
+                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                              risus varius blandit.</p>
+                            <small class="text-muted">Donec id elit non mi porta.</small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">List group item heading</h5>
+                              <small class="text-muted">3 days ago</small>
+                            </div>
+                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                              risus varius blandit.</p>
+                            <small class="text-muted">Donec id elit non mi porta.</small>
+                          </a>
+                        </div>
+                      </div> -->
+                </div>
+              </div>
+            </div>
           </div>
           <div class="tab-pane fade" id="nav-quote" role="tabpanel" aria-labelledby="nav-quote-tab">
             <div class="row">
@@ -475,128 +592,6 @@
                                       </tr>
                             </tbody>
                           </table>
-                    </div>
-                  </div>
-                  <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                          <span aria-hidden="true">&laquo;</span>
-                          <span class="sr-only">Previous</span>
-                        </a>
-                      </li>
-                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
-                          <span class="sr-only">Next</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                    <!-- <div class="col-md-6 com-md-push-3">
-                        <div class="list-group">
-                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-                            <div class="d-flex w-100 justify-content-between">
-                              <h5 class="mb-2">At&t</h5>
-                              <small>3 days ago</small>
-                            </div>
-                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
-                              risus varius blandit.</p>
-                            <small>Donec id elit non mi porta.</small>
-                          </a>
-                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                            <div class="d-flex w-100 justify-content-between">
-                              <h5 class="mb-1">Belk Inc</h5>
-                              <small class="text-muted">3 days ago</small>
-                            </div>
-                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
-                              risus varius blandit.</p>
-                            <small class="text-muted">Donec id elit non mi porta.</small>
-                          </a>
-                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                            <div class="d-flex w-100 justify-content-between">
-                              <h5 class="mb-1">List group item heading</h5>
-                              <small class="text-muted">3 days ago</small>
-                            </div>
-                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
-                              risus varius blandit.</p>
-                            <small class="text-muted">Donec id elit non mi porta.</small>
-                          </a>
-                        </div>
-                      </div> -->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="nav-siteNotes" role="tabpanel" aria-labelledby="nav-siteNotes-tab">
-            <div class="row">
-              <div class="col-12">
-                <div class="card">
-                  <div class="card-header">
-                    <a href="#" class="float-right btn btn-primary" data-toggle="modal" data-target="#notesEditModal"><i class="fa fa-plus-circle mr-2"></i>create</a>
-                    <input type="text" class="form-control float-right mr-2" placeholder="search provider" style="width: 40%;">
-                  </div>
-                  <div class="card-body">
-                    <div class="table-responsive">
-                      <table id="myTable" class="table table-hover">
-                        <thead>
-                            <th>User</th>
-                            <th>Notes</th>
-                            <th>Date Created</th>
-                            <th>Date Updated</th>
-                            <th></th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                              <td>prashant</td>
-                              <td>
-                                  asda dasdas dasd asd asd asd asd as das d asd asd asd asdasd asdlasfa df adf a fafe fadfa adsfqefd dfadf dfsdfdsfd
-                              </td>
-                              <td>12-12-2018</td>
-                              <td>12-12-2018</td>
-                              <td>
-                            <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#notesEditModal"><i class="fa fa-edit fa-lg"></i></a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>prashant</td>
-                              <td>
-                                  asda dasdas dasd asd asd asd asd as das d asd asd asd asdasd asdlasfa df adf a fafe fadfa adsfqefd dfadf dfsdfdsfd
-                              </td>
-                              <td>12-12-2018</td>
-                              <td>12-12-2018</td>
-                              <td>
-                            <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#notesEditModal"><i class="fa fa-edit fa-lg"></i></a>
-                              </td>
-                            </tr>
-                          <tr>
-                              <td>prashant</td>
-                              <td>
-                                  asda dasdas dasd asd asd asd asd as das d asd asd asd asdasd asdlasfa df adf a fafe fadfa adsfqefd dfadf dfsdfdsfd
-                              </td>
-                              <td>12-12-2018</td>
-                              <td>12-12-2018</td>
-                              <td>
-                            <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#notesEditModal"><i class="fa fa-edit fa-lg"></i></a>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>prashant</td>
-                              <td>
-                                  asda dasdas dasd asd asd asd asd as das d asd asd asd asdasd asdlasfa df adf a fafe fadfa adsfqefd dfadf dfsdfdsfd
-                              </td>
-                              <td>12-12-2018</td>
-                              <td>12-12-2018</td>
-                              <td>
-                            <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#notesEditModal"><i class="fa fa-edit fa-lg"></i></a>
-                              </td>
-                          </tr>
-
-                        </tbody>
-                      </table>
                     </div>
                   </div>
                   <nav aria-label="Page navigation example">

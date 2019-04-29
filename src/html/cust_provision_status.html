@@ -63,6 +63,10 @@
       }
     }
 
+    .custom-select, .form-control{
+      border: 1px solid #c7c7c7;
+    }
+
   </style>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -479,7 +483,7 @@
                         <div class="list-group">
                           <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
                             <div class="d-flex w-100 justify-content-between">
-                              <h5 class="mb-2">At&t</h5>
+                              <h5 class="mb-2">AT&T</h5>
                               <small>3 days ago</small>
                             </div>
                             <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
@@ -617,7 +621,7 @@
                         <div class="list-group">
                           <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
                             <div class="d-flex w-100 justify-content-between">
-                              <h5 class="mb-2">At&t</h5>
+                              <h5 class="mb-2">AT&T</h5>
                               <small>3 days ago</small>
                             </div>
                             <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
@@ -757,7 +761,7 @@
                             <tr>
                               <td>Belk_667_cell</td>
                               <td>3-Production</td>
-                              <td>At&T</td>
+                              <td>AT&T</td>
                               <td>VoIP</td>
                               <td>Mobile Wireless</td>
                               <td>S2S Provisional</td>
@@ -768,7 +772,7 @@
                             <tr>
                               <td>Belk_667_cell</td>
                               <td>3-Production</td>
-                              <td>At&T</td>
+                              <td>AT&T</td>
                               <td>VoIP</td>
                               <td>Mobile Wireless</td>
                               <td>S2S Provisional</td>
@@ -779,39 +783,36 @@
                               <tr>
                                 <td>Belk_667_cell</td>
                                 <td>3-Production</td>
-                                <td>At&T</td>
+                                <td>AT&T</td>
                                 <td>VoIP</td>
                                 <td>Mobile Wireless</td>
                                 <td>S2S Provisional</td>
                                 <td>
                                   <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#circuitEditModal"><i class="fa fa-edit fa-lg"></i></a>
                                 </td>
+                              </tr>
+                              <tr>
+                                <td>Belk_667_cell</td>
+                                <td>3-Production</td>
+                                <td>AT&T</td>
+                                <td>VoIP</td>
+                                <td>Mobile Wireless</td>
+                                <td>S2S Provisional</td>
+                                <td>
+                                    <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#circuitEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                                </td>
+                              </tr>
+                              <tr>
+                                  <td>Belk_667_cell</td>
+                                  <td>3-Production</td>
+                                  <td>AT&T</td>
+                                  <td>VoIP</td>
+                                  <td>Mobile Wireless</td>
+                                  <td>S2S Provisional</td>
+                                  <td>
+                                    <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#circuitEditModal"><i class="fa fa-edit fa-lg"></i></a>
+                                  </td>
                                 </tr>
-
-                                <tr>
-                                    <td>Belk_667_cell</td>
-                                    <td>3-Production</td>
-                                    <td>At&T</td>
-                                    <td>VoIP</td>
-                                    <td>Mobile Wireless</td>
-                                    <td>S2S Provisional</td>
-                                    <td>
-                                        <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#circuitEditModal"><i class="fa fa-edit fa-lg"></i></a>
-                                    </td>
-                                  </tr>
-
-                                  <tr>
-                                      <td>Belk_667_cell</td>
-                                      <td>3-Production</td>
-                                      <td>At&T</td>
-                                      <td>VoIP</td>
-                                      <td>Mobile Wireless</td>
-                                      <td>S2S Provisional</td>
-                                      <td>
-                                        <a class="waves-effect waves-dark" href="#" data-toggle="modal" data-target="#circuitEditModal"><i class="fa fa-edit fa-lg"></i></a>
-                                      </td>
-                                    </tr>
-
                             </tbody>
                           </table>
                     </div>
@@ -1003,8 +1004,11 @@
               </div>
               <div class="form-group row">
                 <label class="col-md-3 col-form-label  required">Date Requested</label>
-                <div class="col-md-8">
-                  <input type="text" id="date" class="form-control">
+                <div class="input-group col-md-8">
+                  <input type="text" class="form-control date-pick">
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                  </div>
                 </div>
               </div>
               <div class="form-group row">
@@ -1105,11 +1109,14 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-md-2 col-form-label required">Created Date</label>
-                <div class="col-md-8">
-                  <input type="text" id="createdDate" class="form-control">
+                <label class="col-md-2 col-form-label  required">Created Date</label>
+                <div class="input-group col-md-8">
+                  <input type="text" class="form-control date-pick">
+                  <div class="input-group-append">
+                  <span class="input-group-text"><i class="ti-calendar"></i></span>
+                  </div>
                 </div>
-              </div>
+              </div>                         
               <div class="form-group row">
                 <label class="col-md-2 col-form-label">Modified By</label>
                 <div class="col-md-8">
@@ -1117,11 +1124,14 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-md-2 col-form-label">Modified Date</label>
-                <div class="col-md-8">
-                  <input type="text" id="modifiedDate" class="form-control">
+                <label class="col-md-2 col-form-label  required">Modified Date</label>
+                <div class="input-group col-md-8">
+                  <input type="text" class="form-control date-pick">
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                  </div>
                 </div>
-              </div>
+              </div>              
               <div class="form-group row">
                 <label class="col-md-2 col-form-label"></label>
                 <div class="col-md-8">
@@ -1149,10 +1159,13 @@
           </div>
           <div class="modal-body">
             <form class="form">
-              <div class="form-group row mt-2">
-                <label  class="col-md-3 col-form-label required">Tech Dispatch Date</label>
-                <div class="col-md-7">
-                  <input type="text" id="techDispatchDate" class="form-control">
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label  required">Tech Dispatch Date</label>
+                <div class="input-group col-md-7">
+                  <input type="text" class="form-control date-pick">
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                  </div>
                 </div>
               </div>
               <div class="form-group row">
@@ -1238,10 +1251,6 @@
                           aria-controls="nav-ip-info" aria-selected="false">IP Info</a>
                         <a class="nav-item nav-link" id="nav-notes-info-tab" data-toggle="tab" href="#nav-notes-info" role="tab"
                           aria-controls="nav-notes-info" aria-selected="false">Notes Info</a>
-                        <a class="nav-item nav-link" id="nav-old-notes-tab" data-toggle="tab" href="#nav-old-notes" role="tab"
-                          aria-controls="nav-old-notes" aria-selected="false">Old Notes</a>
-                        <a class="nav-item nav-link" id="attachments" data-toggle="tab" href="#nav-attachments" role="tab"
-                          aria-controls="nav-attachments" aria-selected="false">Attachments</a>
                       </div>
                     </nav>
                   </div>
@@ -1359,11 +1368,11 @@
                               </div>
                             </div>
                             <div class="col-md-6">
-                              <div class="form-group row">
-                                <label class="control-label text-right col-md-4">Circuit Urgency</label>
-                                <div class="col-md-8 custom-checkbox m-b-0">
-                                    <input type="checkbox" class="custom-control-input">
-                                </div>
+                              <div class="offset-md-4 col-md-8">
+                                <label class="custom-control custom-checkbox m-b-0">
+                                  <input type="checkbox" class="custom-control-input">
+                                  <span class="custom-control-label">Circuit Urgency</span>
+                                </label>
                               </div>
                             </div>
                           </div>
@@ -1477,18 +1486,28 @@
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label class="control-label col-md-4 required">Account Password</label>
+                                <label class="control-label text-right col-md-4 required">BoT Name</label>
                                 <div class="col-md-8">
                                   <input type="text" id="circuit-id" class="form-control" value="">
                                 </div>
                               </div>
                             </div>
                             <div class="col-md-6">
-                              <div class="offset-md-4 col-md-8">
-                                <label class="custom-control custom-checkbox m-b-0">
-                                  <input type="checkbox" class="custom-control-input">
-                                  <span class="custom-control-label">Circuit Urgency</span>
-                                </label>
+                              <div class="form-group row">
+                                <label class="control-label text-right col-md-4 required">BoT Number</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="control-label col-md-4 required">Account Password</label>
+                                <div class="col-md-8">
+                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1506,62 +1525,89 @@
                       </div>
                       <div class="tab-pane fade" id="nav-billing" role="tabpanel" aria-labelledby="nav-site-tab">
                         <form class="form">
-                          <div class="form-group row  mt-2">
-                            <label  class="col-md-2 col-form-label required">Bill Start Date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="company_name" class="form-control" value="Gibi Systems">
+                          <div class="form-group row">
+                            <label class="col-md-3 col-form-label  required">Bill Start Date</label>
+                            <div class="input-group col-md-7">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                              <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-md-2 col-form-label required">Bill End Date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="owner" class="form-control" value="Gibi Systems">
+                            <label class="col-md-3 col-form-label required">Bill End Date</label>
+                            <div class="input-group col-md-7">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-md-2 col-form-label  required">Rebate Type</label>
-                            <div class="col-md-6">
-                              <input type="text" id="date" class="form-control">
+                            <label class="col-md-3 col-form-label  required">Rebate Type</label>
+                            <div class="col-md-7">
+                              <input type="text" class="form-control">
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-md-2 col-form-label">Rebate Amount</label>
-                            <div class="col-md-6">
+                            <label class="col-md-3 col-form-label">Rebate Amount</label>
+                            <div class="col-md-7">
                               <input type="text" id="created_by" class="form-control">
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-md-2 col-form-label">Early Term Fees</label>
-                            <div class="col-md-6">
+                            <label class="col-md-3 col-form-label">Early Term Fees</label>
+                            <div class="col-md-7">
                               <input type="text" id="created_by" class="form-control">
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-md-2 col-form-label">ISP Contract Terms</label>
-                            <div class="col-md-6">
+                            <label class="col-md-3 col-form-label">ISP Contract Terms</label>
+                            <div class="col-md-7">
                               <input type="text" id="created_by" class="form-control">
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-md-2 col-form-label">ISP Contract End Date</label>
-                            <div class="col-md-6">
+                            <label class="col-md-3 col-form-label">ISP Contract End Date</label>
+                            <div class="input-group col-md-7">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Construction Amount Paid by ISP</label>
+                            <div class="col-md-7">
                               <input type="text" id="circuit" class="form-control">
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-md-2 col-form-label">Audit Date</label>
-                            <div class="col-md-6">
+                            <label class="col-md-3 col-form-label">Construction Amount Paid by Customer</label>
+                            <div class="col-md-7">
                               <input type="text" id="circuit" class="form-control">
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-md-2 col-form-label">Online Access Codes</label>
-                            <div class="col-md-6">
+                            <label class="col-md-3 col-form-label">Total Construction Amount (Includes Paid by ISP and Customer)</label>
+                            <div class="col-md-7">
+                              <input type="text" id="circuit" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Audit Date</label>
+                            <div class="col-md-7">
+                              <input type="text" id="circuit" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Online Access Codes</label>
+                            <div class="col-md-7">
                               <textarea class="form-control" rows="4" id="comments"></textarea>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <div class="offset-md-2 col-md-6">
+                            <div class="offset-md-3 col-md-7">
                               <label class="custom-control custom-checkbox m-b-0">
                                 <input type="checkbox" class="custom-control-input">
                                 <span class="custom-control-label">Billing Address Verified</span>
@@ -1575,71 +1621,95 @@
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label class="control-label text-right col-md-4 required">Customer Order Date</label>
-                                <div class="col-md-8">
-                                    <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                                <label class="col-md-4 col-form-label  required">Customer Order Date</label>
+                                <div class="input-group col-md-8">
+                                  <input type="text" class="form-control date-pick">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label class="control-label text-right col-md-4 required">Order Cancel Date</label>
-                                <div class="col-md-8">
-                                    <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                                <label class="col-md-4 col-form-label  required">Order Cancel Date</label>
+                                <div class="input-group col-md-8">
+                                  <input type="text" class="form-control date-pick">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
+                            </div>                              
                           </div>
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label class="control-label text-right col-md-4 required">ISP Order Date</label>
-                                <div class="col-md-8">
-                                  <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                <label class="col-md-4 col-form-label  required">ISP Order Date</label>
+                                <div class="input-group col-md-8">
+                                  <input type="text" class="form-control date-pick">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
+                            </div> 
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label class="control-label text-right col-md-4 required">Last Upgrade Date</label>
-                                <div class="col-md-8">
-                                  <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                <label class="col-md-4 col-form-label  required">Last Upgrade Date</label>
+                                <div class="input-group col-md-8">
+                                  <input type="text" class="form-control date-pick">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
+                            </div> 
                           </div>
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label class="control-label text-right col-md-4 required">FOC Date</label>
-                                <div class="col-md-8">
-                                    <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                <label class="col-md-4 col-form-label  required">FOC Date</label>
+                                <div class="input-group col-md-8">
+                                  <input type="text" class="form-control date-pick">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label class="control-label text-right col-md-4 required">S2S Test Date</label>
-                                <div class="col-md-8">
-                                    <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                <label class="col-md-4 col-form-label  required">S2S Test Date</label>
+                                <div class="input-group col-md-8">
+                                  <input type="text" class="form-control date-pick">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
+                            </div>                            
                           </div>
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label class="control-label text-right col-md-4 required">Cognizant OnBoard Date</label>
-                                <div class="col-md-8">
-                                    <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                                <label class="col-md-4 col-form-label  required">Cognizant OnBoard Date</label>
+                                <div class="input-group col-md-8">
+                                  <input type="text" class="form-control date-pick">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label class="control-label text-right col-md-4  required">Cognizant DeBoard Date</label>
-                                <div class="col-md-8">
-                                    <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                <label class="col-md-4 col-form-label  required">Cognizant DeBoard Date</label>
+                                <div class="input-group col-md-8">
+                                  <input type="text" class="form-control date-pick">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -1655,87 +1725,129 @@
                             </div>
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label class="control-label text-right col-md-4 required">FST Dispatch Date</label>
-                                <div class="col-md-8">
-                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                <label class="col-md-4 col-form-label  required">FST Dispatch Date</label>
+                                <div class="input-group col-md-8">
+                                  <input type="text" class="form-control date-pick">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
+                            </div>                            
                           </div>
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label class="control-label text-right col-md-4 required">Scheduled Install Date</label>
-                                <div class="col-md-8">
-                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                <label class="col-md-4 col-form-label  required">Scheduled Install Date</label>
+                                <div class="input-group col-md-8">
+                                  <input type="text" class="form-control date-pick">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label class="control-label text-right col-md-4 required">Disconnect Date</label>
-                                <div class="col-md-8">
-                                    <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                                <label class="col-md-4 col-form-label  required">Disconnect Date</label>
+                                <div class="input-group col-md-8">
+                                  <input type="text" class="form-control date-pick">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
+                            </div>                             
                           </div>
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label class="control-label text-right col-md-4 required">Actual Install Date</label>
-                                <div class="col-md-8">
-                                    <input type="text" id="circuit-id" class="form-control" value="Belk_667_Cellular Wireless">
+                                <label class="col-md-4 col-form-label  required">Actual Install Date</label>
+                                <div class="input-group col-md-8">
+                                  <input type="text" class="form-control date-pick">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
+                            </div>  
                           </div>
                         </form>
                       </div>
                       <div class="tab-pane fade" id="nav-other-dates" role="tabpanel" aria-labelledby="nav-site-tab">
                         <form class="form">
                           <div class="form-group row">
-                            <label  class="col-md-3 col-form-label required">Site Survey Order Date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="company_name" class="form-control" value="Gibi Systems">
+                            <label class="col-md-3 col-form-label  required">Site Survey Order Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-md-3 col-form-label required">Site Survey Completed Date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="owner" class="form-control" value="Gibi Systems">
+                            <label class="col-md-3 col-form-label  required">Site Survey Completed Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-3 col-form-label  required">Site Survey Completed Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group row">
                             <label class="col-md-3 col-form-label  required">Site Survey End Date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="date" class="form-control">
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-md-3 col-form-label">Internet End Date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="created_by" class="form-control">
+                            <label class="col-md-3 col-form-label  required">Internet End Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-md-3 col-form-label">Connection Scheduled Date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="created_by" class="form-control">
+                            <label class="col-md-3 col-form-label  required">Connection Scheduled Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-md-3 col-form-label">Connection Completed Date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="created_by" class="form-control">
+                            <label class="col-md-3 col-form-label  required">Connection Completed Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-md-3 col-form-label">Connection End Date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="circuit" class="form-control">
+                            <label class="col-md-3 col-form-label  required">Connection End Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
-                          </div>
+                          </div>                           
                           <div class="form-group row">
                             <label class="col-md-3 col-form-label">Dev Shipped</label>
                             <div class="col-md-6">
@@ -1743,11 +1855,14 @@
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-md-3 col-form-label">Dev Shipped Date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="circuit" class="form-control">
+                            <label class="col-md-3 col-form-label  required">Dev Shipped Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
-                          </div>
+                          </div> 
                           <div class="form-group row">
                             <label class="col-md-3 col-form-label">Dev Track No</label>
                             <div class="col-md-6">
@@ -1797,19 +1912,32 @@
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="control-label col-md-2 required">Cell Cycle Date</label>
-                            <div class="col-md-6">
-                                <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                            <label class="col-md-2 col-form-label  required">Cell cycle Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
-                          </div>
-                          <div class="form-group row">
-                              <div class="offset-md-2 col-md-6">
+                          </div> 
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="offset-md-4 col-md-8">
                                 <label class="custom-control custom-checkbox m-b-0">
                                   <input type="checkbox" class="custom-control-input">
                                   <span class="custom-control-label">Circuit Pooled</span>
                                 </label>
                               </div>
                             </div>
+                            <div class="col-md-6">
+                              <div class="col-md-8">
+                                <label class="custom-control custom-checkbox m-b-0">
+                                  <input type="checkbox" class="custom-control-input">
+                                  <span class="custom-control-label">Stand By</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
                         </form>
                       </div>
                       <div class="tab-pane fade" id="nav-modem-info" role="tabpanel" aria-labelledby="nav-site-tab">
@@ -1853,25 +1981,29 @@
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="control-label col-md-3 required">CPE Configuration Type</label>
+                            <label class="col-md-3 col-form-label  required">CPE Configuration Type</label>
                             <div class="col-md-6">
-                              <select class="form-control custom-select" tabindex="1">
-                                  <option value="state">1 GB</option>
-                              </select>
+                              <input type="text" id="configuration_type" class="form-control">
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label  class="col-md-3 col-form-label required">CPE Return Received Date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="company_name" class="form-control">
+                            <label class="col-md-3 col-form-label  required">CPE Return Received Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="control-label col-md-3 required">CPE Returned to ISP Date</label>
-                            <div class="col-md-6">
-                                <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                            <label class="col-md-3 col-form-label  required">CPE Returned to ISP Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
-                          </div>
+                          </div>                                                    
                           <div class="form-group row">
                             <label class="control-label col-md-3 required">CPE Returned to ISP Tracking #</label>
                             <div class="col-md-6">
@@ -1879,9 +2011,12 @@
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="control-label col-md-3 required">CPE Recycled Date</label>
-                            <div class="col-md-6">
-                                <input type="text" id="circuit-id" class="form-control" value="Cellular Wireless.1">
+                            <label class="col-md-3 col-form-label  required">CPE Recycled Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
                           </div>
                         </form>
@@ -2132,103 +2267,119 @@
                       </div>
                       <div class="tab-pane fade" id="nav-notes-info" role="tabpanel" aria-labelledby="nav-site-tab">
                         <div class="row">
-                          <div class="col-md-4">
-                            <div class="form-group row">
-                              <label class="control-label col-md-12 required">Notes</label>
-                              <div class="col-md-12">
-                                <textarea class="form-control" rows="2" value="" id="comments"></textarea>
+                          <div class="col-12">
+                            <div class="card">
+                              <div class="card-header">Notes</div>
+                              <div class="card-body">
+                                <form action="#">
+                                  <div class="form-body">
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        <div class="form-group row">
+                                          <label class="control-label col-md-12 required">Notes</label>
+                                          <div class="col-md-12">
+                                            <textarea class="form-control" rows="2" value="" id="comments"></textarea>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <div class="form-group row">
+                                          <label class="control-label col-md-12 required">Created By</label>
+                                          <div class="col-md-12">
+                                              <textarea class="form-control" rows="2" id="comments"></textarea>
+                                          </div>
+                                        </div>
+                                      </div>                                                                       
+                                      <div class="col-md-2">
+                                        <div class="form-group row">
+                                          <label class="control-label col-md-12 required">Created date</label>
+                                          <div class="col-md-12">
+                                              <textarea class="form-control" rows="2" id="comments"></textarea>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <div class="form-group row">
+                                          <label class="control-label col-md-12 required">Modified By</label>
+                                          <div class="col-md-12">
+                                              <textarea class="form-control" rows="2" id="comments"></textarea>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <div class="form-group row">
+                                          <label class="control-label col-md-12 required">Modified date</label>
+                                          <div class="col-md-12">
+                                            <textarea class="form-control" rows="2" id="comments"></textarea>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        <div class="form-group row">
+                                          <div class="col-md-12">
+                                            <textarea class="form-control" rows="2" id="comments"></textarea>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <div class="form-group row">
+                                          <div class="col-md-12">
+                                              <textarea class="form-control" rows="2" id="comments"></textarea>
+                                          </div>
+                                        </div>
+                                      </div>                                   
+                                      <div class="col-md-2">
+                                        <div class="form-group row">
+                                          <div class="col-md-12">
+                                              <textarea class="form-control" rows="2" id="comments"></textarea>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <div class="form-group row">
+                                          <div class="col-md-12">
+                                              <textarea class="form-control" rows="2" id="comments"></textarea>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <div class="form-group row">
+                                          <div class="col-md-12">
+                                            <textarea class="form-control" rows="2" id="comments"></textarea>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div> 
+                                  </div>
+                                </form>
                               </div>
                             </div>
                           </div>
-                          <div class="col-md-2">
-                            <div class="form-group row">
-                              <label class="control-label col-md-12 required">Created By</label>
-                              <div class="col-md-12">
-                                  <textarea class="form-control" rows="2" id="comments"></textarea>
-                              </div>
-                            </div>
-                          </div>                                   
-                          <div class="col-md-2">
-                            <div class="form-group row">
-                              <label class="control-label col-md-12 required">Created date</label>
-                              <div class="col-md-12">
-                                  <textarea class="form-control" rows="2" id="comments"></textarea>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-2">
-                            <div class="form-group row">
-                              <label class="control-label col-md-12 required">Modified By</label>
-                              <div class="col-md-12">
-                                  <textarea class="form-control" rows="2" id="comments"></textarea>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-2">
-                            <div class="form-group row">
-                              <label class="control-label col-md-12 required">Modified date</label>
-                              <div class="col-md-12">
-                                <textarea class="form-control" rows="2" id="comments"></textarea>
-                              </div>
-                            </div>
-                          </div>
-                        </div> 
+                        </div>
                         <div class="row">
-                          <div class="col-md-4">
-                            <div class="form-group row">
-                              <div class="col-md-12">
-                                <textarea class="form-control" rows="2" id="comments"></textarea>
+                          <div class="col-12">
+                            <div class="card">
+                              <div class="card-header">Old Notes</div>
+                              <div class="card-body">
+                                <form action="#">
+                                  <div class="form-body">
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        <div class="form-group row">
+                                          <div class="col-md-12">
+                                            <textarea class="form-control" rows="4" value="" id="comments"></textarea>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div> 
+                                  </div>
+                                </form>
                               </div>
                             </div>
                           </div>
-                          <div class="col-md-2">
-                            <div class="form-group row">
-                              <div class="col-md-12">
-                                  <textarea class="form-control" rows="2" id="comments"></textarea>
-                              </div>
-                            </div>
-                          </div>                                   
-                          <div class="col-md-2">
-                            <div class="form-group row">
-                              <div class="col-md-12">
-                                  <textarea class="form-control" rows="2" id="comments"></textarea>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-2">
-                            <div class="form-group row">
-                              <div class="col-md-12">
-                                  <textarea class="form-control" rows="2" id="comments"></textarea>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-2">
-                            <div class="form-group row">
-                              <div class="col-md-12">
-                                <textarea class="form-control" rows="2" id="comments"></textarea>
-                              </div>
-                            </div>
-                          </div>
-                        </div> 
-                      </div>
-                      <div class="tab-pane fade" id="nav-old-notes" role="tabpanel" aria-labelledby="nav-site-tab">
-                        <div class="row">
-                          <div class="col-md-12">
-                            <div class="form-group row">
-                              <div class="col-md-12">
-                                <textarea class="form-control" rows="4" value="" id="comments"></textarea>
-                              </div>
-                            </div>
-                          </div>
-                        </div> 
-                      </div>
-                      <div class="tab-pane fade" id="nav-attachments" role="tabpanel" aria-labelledby="nav-site-tab">
-                          <div class="form-group row">
-                            <label  class="col-md-2 col-form-label required">Attachments</label>
-                            <div class="col-md-6">
-                              <input type="file" id="attachment" class="form-control">
-                            </div>
-                          </div>
+                        </div>
                       </div>
                     </div>
 
@@ -2236,7 +2387,7 @@
                               <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
                                   <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-2">At&t</h5>
+                                    <h5 class="mb-2">AT&T</h5>
                                     <small>3 days ago</small>
                                   </div>
                                   <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
@@ -2279,7 +2430,7 @@
       <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title" id="exampleModalLabel1">Circuit Information</h4>
+            <h4 class="modal-title" id="exampleModalLabel1">Device Information</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body">
@@ -2309,7 +2460,7 @@
                               <div class="form-group row">
                                 <label class="control-label text-right col-md-4 required">Device ID</label>
                                 <div class="col-md-8">
-                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                    <input type="text" class="form-control">
                                 </div>
                               </div>
                             </div>
@@ -2431,9 +2582,12 @@
                             </div>
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label class="control-label text-right col-md-4 required">Maintanence Contact Expiry Date</label>
-                                <div class="col-md-8">
-                                  <input type="text" id="circuit-id" class="form-control" value="">
+                                <label class="col-md-4 col-form-label  required">Maintanence contact Expiry Date</label>
+                                <div class="input-group col-md-8">
+                                  <input type="text" class="form-control date-pick">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -2455,13 +2609,16 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </div>                          
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label class="control-label text-right col-md-4 required">License Expiry Date</label>
-                                <div class="col-md-8">
-                                    <input type="text" id="circuit-id" class="form-control" value="">
+                                <label class="col-md-4 col-form-label  required">License Expiry Date</label>
+                                <div class="input-group col-md-8">
+                                  <input type="text" class="form-control date-pick">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="ti-calendar"></i></span>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -2699,47 +2856,65 @@
                       <div class="tab-pane fade" id="nav-date" role="tabpanel" aria-labelledby="nav-site-tab">
                         <form class="form">
                           <div class="form-group row">
-                            <label class="control-label col-md-2 required">Ship date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="circuit-id" class="form-control" value="">
+                            <label class="col-md-3 col-form-label  required">Ship Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="control-label col-md-2 required">Ship Tracking</label>
+                            <label class="control-label col-md-3 required">Ship Tracking</label>
                             <div class="col-md-6">
                               <textarea class="form-control" rows="4" id="comments"></textarea>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="control-label col-md-2 required">Installation Date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="installationDate" class="form-control" value="">
+                            <label class="col-md-3 col-form-label  required">Installation Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="control-label col-md-2 required">Disconnect Date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="disconnectDate" class="form-control" value="">
+                            <label class="col-md-3 col-form-label  required">Disconnect Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="control-label col-md-2 required">Return Date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="returnDate" class="form-control" value="">
+                            <label class="col-md-3 col-form-label  required">Return Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="control-label col-md-2 required">License Start Date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="licenseStartDate" class="form-control" value="">
+                            <label class="col-md-3 col-form-label  required">License Start Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="control-label col-md-2 required">License End Date</label>
-                            <div class="col-md-6">
-                              <input type="text" id="licenseEndDate" class="form-control" value="">
+                            <label class="col-md-3 col-form-label  required">License End Date</label>
+                            <div class="input-group col-md-6">
+                              <input type="text" class="form-control date-pick">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-calendar"></i></span>
+                              </div>
                             </div>
-                          </div>                                                         
+                          </div>                                                                                                        
                         </form>
                       </div>
                       <div class="tab-pane fade" id="nav-notes" role="tabpanel" aria-labelledby="nav-site-tab">
@@ -2794,7 +2969,7 @@
                               <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
                                   <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-2">At&t</h5>
+                                    <h5 class="mb-2">AT&T</h5>
                                     <small>3 days ago</small>
                                   </div>
                                   <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
@@ -2855,6 +3030,7 @@
   <!-- ============================================================== -->
   <!-- All Jquery -->
   <!-- ============================================================== -->
+  
   <script src="../assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
   <!-- Bootstrap popper Core JavaScript -->
   <script src="../assets/node_modules/popper/popper.min.js"></script>
@@ -2873,6 +3049,13 @@
   <script src="../assets/node_modules/moment/moment.js"></script>
   <script src="../assets/node_modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
 
+  <script>
+    $(function() {
+      console.log('custom js');
+      $('.date-pick').bootstrapMaterialDatePicker({ weekStart : 0, time: false });
+    });
+  </script>
+  
 </body>
 
 </html>
